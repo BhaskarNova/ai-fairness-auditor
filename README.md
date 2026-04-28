@@ -4,28 +4,24 @@
 ![Streamlit](https://img.shields.io/badge/Streamlit-Cloud-red)
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machine_Learning-orange)
 
-**Live Web Application:** [Insert your Streamlit Cloud Link Here]
-**Demo Video:** [Insert your Google Drive Video Link Here]
+## 🌐 Live Access
+**Access the live auditor terminal here:** [https://ai-fairness-auditor-6dn7twadahkdgx2wxwbact.streamlit.app/](https://ai-fairness-auditor-6dn7twadahkdgx2wxwbact.streamlit.app/)
 
 ## 📌 Project Overview
-The Unbiased AI Compliance Terminal is an interactive auditing and mitigation engine designed to enforce algorithmic fairness in machine learning models. Built for the Solution Challenge 2026, this application mathematically detects demographic prejudices in AI predictions and applies post-processing threshold optimization to ensure legal compliance (specifically the 4/5ths Rule / Disparate Impact threshold).
+[cite_start]The Unbiased AI Compliance Terminal is an interactive auditing and mitigation engine designed to enforce algorithmic fairness in machine learning models. [cite: 6] [cite_start]This application mathematically detects demographic prejudices and applies post-processing threshold optimization to ensure legal compliance (specifically the 4/5ths Rule / Disparate Impact threshold). [cite: 8]
 
 ## 🚨 The Problem
-Machine learning models often optimize solely for raw accuracy, inadvertently inheriting historical human biases from their training data. For example, a naive model predicting high income may approve male applicants at a vastly higher rate than female applicants, resulting in algorithmic discrimination and violating legal fairness standards.
+[cite_start]Machine learning models often inherit historical human biases from their training data. [cite: 12] [cite_start]If a model predicting income or loan approval approves male applicants at a significantly higher rate than female applicants, it creates a "Disparate Impact," which is both unethical and legally non-compliant. [cite: 13]
 
 ## 💡 The Solution
-This terminal intercepts biased AI predictions before deployment. 
-1. **Baseline Audit:** Ingests the model and mathematically exposes the bias (calculating the Disparate Impact score).
-2. **Mitigation Engine:** Dynamically adjusts decision thresholds for privileged and unprivileged groups.
-3. **Compliance:** Equalizes approval rates to push the Disparate Impact score above the 0.80 legal requirement, prioritizing human equity alongside statistical accuracy.
+This terminal intercepts biased AI predictions:
+1. **Baseline Audit:** Calculates the Disparate Impact score using the formula:
+   $$DI = \frac{\text{Approval Rate of Unprivileged Group}}{\text{Approval Rate of Privileged Group}}$$
+2. [cite_start]**Mitigation:** Dynamically adjusts decision thresholds for each demographic to neutralize historical skew. [cite: 16]
+3. [cite_start]**Compliance Verification:** Re-audits the model to ensure the DI score is above the legal **0.80** requirement. [cite: 17]
 
 ## ⚙️ Technology Stack
-* **Frontend/Deployment:** Streamlit (Community Cloud)
-* **Core Logic:** Python, Scikit-Learn, Pandas, NumPy
-* **Visualization:** Matplotlib
-* **Data Source:** UCI Adult Income Dataset
-
-## 🚀 How to Run Locally
-
-1. Clone the repository:
-git clone https://github.com/BhaskarNova/ai-fairness-auditor.git
+* [cite_start]**Cloud & AI:** Google Cloud (Colab), Google Gemini API [cite: 8, 22]
+* [cite_start]**Frontend:** Streamlit Cloud [cite: 22]
+* [cite_start]**Core Engine:** Scikit-Learn, Pandas, NumPy [cite: 22]
+* [cite_start]**Data:** UCI Adult Income Dataset [cite: 22]
